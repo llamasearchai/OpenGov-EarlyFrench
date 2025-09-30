@@ -1,7 +1,5 @@
 """Test French pronunciation coaching module."""
 
-import pytest
-
 from opengov_earlyfrench.core.pronunciation_coach import PronunciationCoach
 
 
@@ -76,4 +74,3 @@ def test_minimal_pairs(pronunciation_coach: PronunciationCoach) -> None:
     assert "pairs" in u_vs_ou
     assert "tip" in u_vs_ou
     assert len(u_vs_ou["pairs"]) > 0
-
