@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Simple launcher for the OpenGov-EarlyFrench CLI
+# Usage: bash scripts/francais <command> [args]
+
+PYTHON_BIN="${PYTHON:-python3}"
+exec "$PYTHON_BIN" -m opengov_earlyfrench.cli "$@"
+
