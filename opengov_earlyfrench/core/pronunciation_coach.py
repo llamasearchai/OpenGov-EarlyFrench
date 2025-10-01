@@ -18,7 +18,9 @@ class PronunciationCoach:
         self.special_sounds = self._initialize_special_sounds()
         self.accent_marks = self._initialize_accent_marks()
 
-    def _initialize_nasal_vowels(self) -> dict[str, dict[str, Union[str, list[str], dict[str, str]]]]:
+    def _initialize_nasal_vowels(
+        self,
+    ) -> dict[str, dict[str, Union[str, list[str], dict[str, str]]]]:
         """Initialize nasal vowel patterns and examples."""
         return {
             "an": {
@@ -70,7 +72,9 @@ class PronunciationCoach:
             },
         }
 
-    def _initialize_silent_letters(self) -> dict[str, dict[str, Union[str, list[str], dict[str, str]]]]:
+    def _initialize_silent_letters(
+        self,
+    ) -> dict[str, dict[str, Union[str, list[str], dict[str, str]]]]:
         """Initialize silent letter rules."""
         return {
             "final_consonants": {
@@ -108,7 +112,9 @@ class PronunciationCoach:
             },
         }
 
-    def _initialize_special_sounds(self) -> dict[str, dict[str, Union[str, list[str], dict[str, str]]]]:
+    def _initialize_special_sounds(
+        self,
+    ) -> dict[str, dict[str, Union[str, list[str], dict[str, str]]]]:
         """Initialize special French sounds."""
         return {
             "r": {
@@ -181,7 +187,11 @@ class PronunciationCoach:
             },
         }
 
-    def teach_nasal_vowels(self) -> dict[str, Union[str, dict[str, dict[str, Union[str, list[str], dict[str, str]]]], list[str]]]:
+    def teach_nasal_vowels(
+        self,
+    ) -> dict[
+        str, Union[str, dict[str, dict[str, Union[str, list[str], dict[str, str]]]], list[str]]
+    ]:
         """Teach nasal vowel pronunciation."""
         return {
             "explanation": "Nasal vowels are unique to French - air flows through nose",

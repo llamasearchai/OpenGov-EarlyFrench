@@ -82,9 +82,7 @@ class Settings(BaseSettings):
     enable_metrics: bool = Field(default=True)
 
     # CORS
-    cors_origins: list[str] = Field(
-        default=["http://localhost:3000", "http://localhost:8501"]
-    )
+    cors_origins: list[str] = Field(default=["http://localhost:3000", "http://localhost:8501"])
 
     @field_validator("cors_origins", mode="before")
     @classmethod

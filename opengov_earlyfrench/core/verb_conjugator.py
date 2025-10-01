@@ -335,7 +335,7 @@ class VerbConjugator:
 
         # Get auxiliary conjugation without specific subject first
         aux_conj = self.conjugate(auxiliary, Tense.PRESENT)
-        
+
         # Get the form for the specific subject
         aux_form = ""
         if isinstance(aux_conj.get("forms"), dict):
@@ -383,7 +383,9 @@ class VerbConjugator:
 
     def reflexive_verb(self, infinitive: str) -> dict[str, Union[str, dict[str, str]]]:
         """Handle reflexive verb conjugation."""
-        base_verb = infinitive[3:] if infinitive.startswith("se ") else infinitive.replace("se ", "")
+        base_verb = (
+            infinitive[3:] if infinitive.startswith("se ") else infinitive.replace("se ", "")
+        )
 
         reflexive_pronouns = {
             "je": "me",
@@ -403,7 +405,9 @@ class VerbConjugator:
                 pronoun = reflexive_pronouns.get(subject, "se")
 
                 if subject == "je" and form and form[0] in ("a", "e", "i", "o", "u", "h"):
-                    reflexive_forms["je m'"] = form[2:] if form.startswith("j'") else form  # pragma: no cover (subject key is usually "j'")
+                    reflexive_forms["je m'"] = (
+                        form[2:] if form.startswith("j'") else form
+                    )  # pragma: no cover (subject key is usually "j'")
                 else:
                     reflexive_forms[f"{subject} {pronoun}"] = form
 

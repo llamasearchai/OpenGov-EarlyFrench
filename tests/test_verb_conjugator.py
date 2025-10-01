@@ -1,7 +1,5 @@
 """Test French verb conjugation system."""
 
-import pytest
-
 from opengov_earlyfrench.core.models import Tense
 from opengov_earlyfrench.core.verb_conjugator import VerbConjugator
 

@@ -1,5 +1,7 @@
 # OpenGov-EarlyFrench
 
+[![CI](https://github.com/llamasearchai/opengov-earlyfrench/actions/workflows/ci.yml/badge.svg)](https://github.com/llamasearchai/opengov-earlyfrench/actions/workflows/ci.yml)
+[![Coverage: 100%](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://pytest-cov.readthedocs.io/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -318,4 +320,3 @@ For support, please open an issue on GitHub or contact nikjois@llamasearch.ai
 ## Bienvenue et bonne chance dans votre apprentissage du français!
 
 Making French accessible to learners worldwide.
-

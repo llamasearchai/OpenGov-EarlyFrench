@@ -1,7 +1,5 @@
 """Test French gender teaching module."""
 
-import pytest
-
 from opengov_earlyfrench.core.gender_teacher import GenderTeacher
 
 
@@ -91,7 +89,10 @@ def test_feminine_ending_ite(gender_teacher: GenderTeacher) -> None:
     result = gender_teacher.identify_pattern("liberté")
 
     assert result["likely_gender"] == "feminine"
-    assert "ité" in str(result.get("rule", "")).lower() or "feminine" in str(result.get("rule", "")).lower()
+    assert (
+        "ité" in str(result.get("rule", "")).lower()
+        or "feminine" in str(result.get("rule", "")).lower()
+    )
 
 
 def test_masculine_ending_age(gender_teacher: GenderTeacher) -> None:
@@ -99,7 +100,10 @@ def test_masculine_ending_age(gender_teacher: GenderTeacher) -> None:
     result = gender_teacher.identify_pattern("voyage")
 
     assert result["likely_gender"] == "masculine"
-    assert "age" in str(result.get("rule", "")).lower() or "masculine" in str(result.get("rule", "")).lower()
+    assert (
+        "age" in str(result.get("rule", "")).lower()
+        or "masculine" in str(result.get("rule", "")).lower()
+    )
 
 
 def test_exception_detection(gender_teacher: GenderTeacher) -> None:
@@ -108,4 +112,3 @@ def test_exception_detection(gender_teacher: GenderTeacher) -> None:
 
     assert result["word"] == "page"
     assert result.get("is_exception") or result["likely_gender"] == "feminine"
-

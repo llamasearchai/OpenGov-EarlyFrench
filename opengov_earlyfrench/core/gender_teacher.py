@@ -181,7 +181,10 @@ class GenderTeacher:
                 end_clean = end.strip("-")
                 if word_lower.endswith(end_clean):
                     exceptions = data.get("exceptions", [])
-                    is_exception = any(ex.replace("l'", "").replace("la ", "").replace("le ", "") in word_lower for ex in exceptions)
+                    is_exception = any(
+                        ex.replace("l'", "").replace("la ", "").replace("le ", "") in word_lower
+                        for ex in exceptions
+                    )
                     return {
                         "word": word,
                         "likely_gender": "masculine" if is_exception else "feminine",
@@ -195,7 +198,10 @@ class GenderTeacher:
             end_clean = ending.strip("-")
             if word_lower.endswith(end_clean):
                 exceptions = data.get("exceptions", [])
-                is_exception = any(ex.replace("l'", "").replace("la ", "").replace("le ", "") in word_lower for ex in exceptions)
+                is_exception = any(
+                    ex.replace("l'", "").replace("la ", "").replace("le ", "") in word_lower
+                    for ex in exceptions
+                )
                 return {
                     "word": word,
                     "likely_gender": "feminine" if is_exception else "masculine",

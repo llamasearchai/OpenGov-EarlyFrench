@@ -1,4 +1,5 @@
 """Test FastAPI endpoints."""
+
 from fastapi.testclient import TestClient
 
 
@@ -60,7 +61,9 @@ def test_minimal_pairs_endpoint(api_client: TestClient) -> None:
 
 def test_conjugate_verb_endpoint(api_client: TestClient) -> None:
     """Test verb conjugation endpoint."""
-    response = api_client.post("/api/v1/verbs/conjugate", json={"verb": "parler", "tense": "présent"})
+    response = api_client.post(
+        "/api/v1/verbs/conjugate", json={"verb": "parler", "tense": "présent"}
+    )
     assert response.status_code == 200
     data = response.json()
     assert "forms" in data or "error" in data

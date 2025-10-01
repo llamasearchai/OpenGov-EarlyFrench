@@ -1,4 +1,5 @@
 """Core data models for French language learning."""
+
 from enum import Enum
 from typing import Any, Optional
 
