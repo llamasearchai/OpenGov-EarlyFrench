@@ -1,45 +1,31 @@
-# Pull Request
+Title: Maintain 100% coverage, robust CLI, CI-ready
 
-## Description
+Summary
+- Python 3.9 compatibility across the codebase
+- Verified CLI and API; added launcher script
+- 100% tests and coverage with comprehensive CLI/API tests
+- Pre-commit hooks and GitHub Actions CI
+- Documentation updates (badges, banner)
 
-Please include a summary of the changes and the related issue. Please also include relevant motivation and context.
+Changes
+- Compatibility: replace PEP 604 unions with typing.Union/Optional
+- Tests: add CLI, API chat, configuration, and extra verb coverage
+- Tooling: add pre-commit (ruff/black/mypy) and CI workflow
+- Scripts: prefer PY/PIP env, safer install/test flows
+- Docs: CI and coverage badges; project banner
 
-Fixes # (issue)
+Validation
+- pytest --cov=opengov_earlyfrench: 100% coverage
+- ruff check: clean
+- black --check: clean
+- Manual smoke tests for CLI and API endpoints
 
-## Type of change
+Checklist
+- [ ] CI passes on this PR
+- [ ] No placeholders or emojis in code or docs
+- [ ] CLI commands work as described
+- [ ] API endpoints respond and /docs renders
 
-Please delete options that are not relevant.
-
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
-- [ ] Code refactoring
-- [ ] Performance improvement
-- [ ] Test coverage improvement
-
-## How Has This Been Tested?
-
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce.
-
-- [ ] Test A
-- [ ] Test B
-
-## Checklist:
-
-- [ ] My code follows the style guidelines of this project (Black, Ruff)
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
-- [ ] I have checked my code and corrected any misspellings
-- [ ] All tests pass (pytest)
-- [ ] Code coverage has not decreased
-
-## Additional context
-
-Add any other context about the pull request here.
+Notes
+- The chat command gracefully handles missing OPENAI_API_KEY during tests.
 
