@@ -1,5 +1,9 @@
 # OpenGov-EarlyFrench
 
+<p align="center">
+  <img src="OpenGov-EarlyFrench.png" alt="OpenGov-EarlyFrench" width="75%" />
+</p>
+
 [![CI](https://github.com/llamasearchai/opengov-earlyfrench/actions/workflows/ci.yml/badge.svg)](https://github.com/llamasearchai/opengov-earlyfrench/actions/workflows/ci.yml)
 [![Coverage: 100%](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://pytest-cov.readthedocs.io/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
